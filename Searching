@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Searching {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String[] subjects = {"CCC100", "CCC101", "ISY101", "ISY102", "PED011", "GEC104", "GEC101", "NST001"};
+
+        String[] rooms = {"ICT 3B / Database Lab", "ICT 3B / Database Lab", "ICT 3A", "ICT 3A", "GYM", "IDS-LAB3", "CGEM 10", "TBA"};
+
+        System.out.println("===== CLASSROOM FINDER =====");
+        System.out.print("Enter subject: ");
+        String search = input.nextLine();
+
+        boolean found = false;
+
+        for (int i = 0; i < subjects.length; i++) {
+            if (subjects[i].equalsIgnoreCase(search)) {
+                System.out.println("Subject Found!");
+                System.out.println("Subject: " + subjects[i]);
+                System.out.println("Room: " + rooms[i]);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("\nSubject not found in your schedule.");
+        }
+
+        input.close();
+    }
+}
