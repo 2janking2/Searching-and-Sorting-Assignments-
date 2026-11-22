@@ -25,7 +25,7 @@ public class Searching {
         }
 
         if (!found) {
-            System.out.println("\nSubject not found in your schedule.");
+            System.out.println("Subject not found in your schedule.");
         }
 
         input.close();
