@@ -23,11 +23,9 @@ public class Searching {
                 break;
             }
         }
-
         if (!found) {
             System.out.println("Subject not found in your schedule.");
         }
-
         input.close();
     }
 }
